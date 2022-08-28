@@ -1,0 +1,30 @@
+<script language=javascript>
+function validate()
+{
+var t1=document.getElementById("t1").value;
+var t2=document.getElementById("t2").value;
+
+	if(t1.length==0)
+	{
+		alert("please enter name");
+	}
+	if(t2.length==0)
+	{
+		alert("please enter age");
+	}
+
+}
+</script>
+<form>
+name:<input type=text name=t1 ><br>
+
+age:<input type=text name=t2 ><br>
+
+<input type=button name=b1 value=ok onclick="validate()">
+
+</form>
+
+
+
+
+

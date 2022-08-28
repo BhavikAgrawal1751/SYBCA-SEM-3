@@ -1,0 +1,109 @@
+<script language=javascript>
+function validate1()
+{
+	var t1=document.getElementById("t1").value;
+
+	for(i=0;i<t1.length;i++)
+	{
+		var c1=t1.charAt(i);
+		if(!(c1>='a' && c1<='z'))
+		{
+			alert("invalid name");
+			return;
+		}
+	}
+	alert("valid name");
+}
+
+function validate2()
+{
+	var t2=document.getElementById("t2").value;
+		if( t2>='18'&& t2<='27')
+		{
+			alert("valid age");
+		}
+		else
+		{
+			alert("invalid age")
+		}
+}
+
+
+function validate3()
+{
+	var t3=document.getElementById("t3").value;
+	
+	if ( isNaN (t3))
+		alert("invalid");
+	else
+		alert("valid");
+	
+}
+function validate4()
+{
+	var t4=document.getElementById("t4").value;
+	
+	if ( isNaN (t4))
+		alert("invalid");
+	else
+		alert("valid");
+	
+}
+function validate5()
+{
+	var t5=document.getElementById("t5").value;
+	
+	if ( isNaN (t5))
+		alert("invalid");
+	else
+		alert("valid");
+	
+}
+
+function cal()
+{
+	
+	var t3=document.getElementById("t3").value;
+	var t4=document.getElementById("t4").value;
+	var t5=document.getElementById("t5").value;
+		var p1=t3*100/t4;
+		var p2=p1-(2*(t5-1));
+	document.getElementById("t6").value=p2;
+}
+
+function validate()
+{
+	validate1();
+	validate2();
+	validate3();
+	validate4();
+	validate5();
+	cal();
+
+}
+</script>
+
+
+<form name=f1>
+name:<input type=text name=t1><br>
+age:<input type=text name=t2><br>
+
+stream:<br>
+<input type=radio name=r1 id=r1 value=science>science<br>
+<input type=radio name=r1 id=r2 value=commerce>commerce<br>
+
+catagory:
+<select name=cata>
+<option value="open">open</option>
+<option value="scbc">scbc</option>
+<option value="sc">sc</option>
+<option value="st">st</option>
+</select><br>
+
+obtain marks:<input type=text name=t3><br>
+total marks:<input type=text name=t4><br>
+no.of attemp:<input type=text name=t5><br>
+percentage:<input type=text name=t6><br>
+
+<input type=button name=b1 value=submit onclick=validate()>
+</form>

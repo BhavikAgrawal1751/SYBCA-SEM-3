@@ -1,0 +1,78 @@
+<html>
+<head>
+<h1><marquee>registration form</marquee></h1>
+<script language=javascript>
+function no()
+{
+var t1=document.getElementById("t1").value;
+	if(isNaN(t1))
+	{
+		alert("invalid");
+	}
+	else
+	{
+		alert("valid");
+	}
+}
+
+function name()
+{
+
+var t2=document.getElementById("t2").value;
+	if(t2.length==0)
+	{
+		alert("please enter name");
+		return;
+	}
+	var c1=t2.charAt(0);
+	if(!(c1>="A" && c1<="Z"))
+	{
+		alert("invalid name");
+		return;
+	}
+	for(i=1;i<t2.length;i++)
+	{
+		var c2=t2.charAt(i);
+		if(!(c2>="a" && c2<="z"))
+		{
+			alert("invalid...");
+			return;
+		}
+	}
+	alert("valid name");
+}
+
+
+function age()
+{
+	
+var t3=document.getElementById("t3").value;
+	if(t3>="18" && t3<="28")
+	{
+		alert("valid age");
+	}
+	else
+	{
+		alert("invalid age");
+	}
+}
+
+function validate()
+{
+	no();
+//	name();
+//	age();
+}
+</script>
+
+<body align="center" bgcolor="yellow">
+<form>
+no:<input type=text name=t1><br>
+name:<input type=text name=t2><br>
+age:<input type=text name=t3><br>
+email:<input type=text name=t4><br>
+
+<input type=button name=b1 value=submit onclick="validate()">
+</form>
+</body>
+</html>

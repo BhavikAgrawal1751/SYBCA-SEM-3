@@ -1,0 +1,91 @@
+<html>
+<head>
+
+<script language=javascript>
+
+
+function no()
+{
+var t1=document.getElementById("t1").value;
+pat=/^[0-9]+$/;	
+if(!pat.test(t1))
+         alert("Invalid No");
+}
+
+function name1()
+{
+    //t2=document.f1.t2.value;
+    var t2=document.getElementById("t2").value;
+    pat=/^[a-zA-Z]+$/;
+    if(!pat.test(t2))
+         alert("Invalid Name");
+}
+
+function mno()
+{
+var t3=document.getElementById("t3").value;
+pat=/^[0-9]{10}$/; 
+if(!pat.test(t3))
+         alert("Invalid No");
+}
+
+function mail()
+{
+
+    	t4=document.f1.t4.value;
+    	pat=/^[a-zA-Z][a-zA-Z0-9 _]+\.?[a-zA-Z0-9]+@[a-z]+(.com|.co.in)$/;
+	if(!pat.test(t4))
+         alert("Invalid mail add");
+}
+
+
+function uname()
+{
+    t5=document.f1.t5.value;
+    pat=/^[a-zA-Z0-9_]{1,20}$/;	
+    if(!pat.test(t5))
+         alert("Invalid uname");
+}
+
+function pwd()
+{
+    t6=document.f1.t6.value;
+	pat=/^[a-zA-Z0-9@#%^&*()_!$]{6,20}$/;
+	if(!pat.test(t6))
+         alert("Invalid pwd");
+}
+
+function validate1()
+{
+    var t7=document.getElementById("t7").value;
+    d=new Date;
+    age=d-t7;
+    print("Age of Employee :",age);
+}
+
+function validate()
+{
+	alert("your form is ragistred");
+}
+
+</script>
+</head>
+
+<body>
+<!-- align="center" bgcolor="yellow"> -->
+<form name=f1>
+
+no:<input type=text name=t1  id=t1 onblur="no()"><br>
+
+name:<input type=text name=t2 id=t2 onblur="name1()"><br>
+
+mobileno:<input type=text name=t3 id=t3 onblur="mno()"><br>
+email:<input type=text name=t4 id=t4 onblur="mail()"><br>
+username:<input type=text name=t5 id=t5 onblur="uname()"><br>
+password:<input type=text name=t6 id=t6 onblur="pwd()"><br>
+dob:<input type="text" name="t7" id="t7" onblur="validate1"><br>
+joiningdate:<input type="text" name="t8"><br>
+<input type=button name=b1 value=submit onclick="validate()"><br>
+</form>
+</body>
+</html>

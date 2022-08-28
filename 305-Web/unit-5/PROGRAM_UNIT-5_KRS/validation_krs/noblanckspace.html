@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function s1()
+{
+x = document.getElementByld("str").value;
+x =x.trim();
+if (x.length == 0)
+{
+alert("string has blank spaces only ");
+return false;
+}
+else
+{
+	return true;
+}
+}
+</script>
+</head>
+<body>
+<form>
+input string:<input type="text" id="str">
+<input type="button" name="b1" onclick="s1()" value="submit">
+</form>
+</body>
+</html>

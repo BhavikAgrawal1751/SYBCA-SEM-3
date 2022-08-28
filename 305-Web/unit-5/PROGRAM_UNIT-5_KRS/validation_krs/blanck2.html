@@ -1,0 +1,37 @@
+<head>
+<script language="JavaScript">
+function form_validation()
+{
+name = document.form1.uname.value;
+password= document.form1.pass_word.value;
+
+if (name=="")
+
+{
+alert("name is required");
+return false;
+
+}
+
+if (password=="" )
+
+{
+
+alert("please enter password");
+return false;
+
+}
+}
+
+</script>
+</head>
+<body>
+<form name="form1" action="prompt.html" method="post" onSubmit= "return form_validation()">
+Student Name: <input type="text" name="uname">
+
+<br>
+Password: <input type="password" name="pass_word">
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>

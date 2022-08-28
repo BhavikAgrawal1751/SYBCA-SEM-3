@@ -1,0 +1,50 @@
+<script language=javascript>
+function validate1()
+{
+	var txt1=document.getElementById("t1").value;
+	if(txt1.length<=5)
+	{
+		alert("name above 5 char needed");
+		return;
+	}
+	var t=txt1.charAt(0);
+	if(!(t>'A' && t<='Z'))
+	{
+		alert("invalid name,begin with capital alphabate");
+		return;
+	}
+	for(i=1;i<txt1.length;i++)
+	{
+		var t1=txt1.charAt(i);
+		if(!(t1>='a' && t1<='z'))
+		{
+			alert("invalid name");
+			return;
+		}
+	}
+	alert("valid name");
+}
+
+function validate2()
+{
+	var txt2=document.getElementById("t2").value;
+	
+	if ( isNaN (txt2))
+		alert("invalid");
+	else
+		alert("valid");
+	
+}
+function validate()
+{
+	validate1();
+	validate2();
+
+}
+</script>
+<form>
+NO:<input type=text name=t2><br><br>
+NAME:<input type=text name=t1><br><br>
+<input type=button value=ok onclick="validate()"><br><br>
+</form>
+	
