@@ -1,0 +1,59 @@
+<html>
+<head>
+<h1><b><i><u><marquee><font color=red> MINI CALCULATOR </font></marquee></u></i></b></h1>
+<hr>
+<script language=javascript>
+
+function cal()
+{
+var ans=0;
+
+var no1=document.getElementById("t1").value;
+var no2=document.getElementById("t2").value;
+	if(document.getElementById("r1").checked==true)
+	{
+		ans=parseInt(no1)+parseInt(no2);
+	}
+	else if(document.getElementById("r2").checked==true)
+	{
+		ans=no1-no2;
+	}
+	else if(document.getElementById("r3").checked==true)
+	{
+		ans=no1*no2;
+	}
+	else if(document.getElementById("r4").checked==true)
+	{
+		ans=no1/no2;	
+	}
+
+document.getElementById("t3").value=ans;
+}
+
+function clear1()
+{
+var no1=document.getElementById("t1");
+var no2=document.getElementById("t2");
+var ans=document.getElementById("t3");
+no1.value="";
+no2.value="";
+ans.value="";
+}
+</script>
+</head>
+<center>
+<body bgcolor=yellow>
+<form>
+NO1:<input type=text name=t1><br>
+NO2:<input type=text name=t2><br>
+<input type=radio name=r1 id=r1 value=+>+<br>
+<input type=radio name=r1 id=r2 value=->-<br>
+<input type=radio name=r1 id=r3 value=*>*<br>
+<input type=radio name=r1 id=r4 value=/>/<br>
+ANS:<input type=text name=t3><br>
+<input type=button name=b1 value=cal onclick=cal()>
+<input type=button name=b2 value=clear onclick=clear1()>
+</center>
+</body>
+</form>
+</html>

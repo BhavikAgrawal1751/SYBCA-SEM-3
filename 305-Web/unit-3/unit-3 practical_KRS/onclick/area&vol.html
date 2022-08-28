@@ -1,0 +1,50 @@
+<html>
+<head>
+<h1><b><i><u><marquee><font color=black>AREA AND VOLUME OF RACTANGLE </font></marquee></u></i></b></h1>
+<hr>
+<script language=javascript>
+
+function area()
+{
+var l=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+var ans=l*b;
+document.getElementById("t4").value=ans;
+}
+
+function vol()
+{
+var l=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+var h=document.getElementById("t3").value;
+var ans=l*b*h;
+document.getElementById("t4").value=ans;
+}
+
+function clear1()
+{
+var l=document.getElementById("t1");
+var b=document.getElementById("t2");
+var h=document.getElementById("t3");
+var ans=document.getElementById("t4");
+l.value="";
+b.value="";
+h.value="";
+ans.value="";
+}
+</script>
+</head>
+<center>
+<body bgcolor=neavyblue>
+<form>
+L:<input type=text name=t1><br>
+B:<input type=text name=t2><br>
+H:<input type=text name=t3><br>
+ANS:<input type=text name=t4><br>
+<input type=button name=b1 value=area onclick=area()>
+<input type=button name=b2 value=vol onclick=vol()>
+<input type=button name=b3 value=clear onclick=clear1()>
+</center>
+</body>
+</form>
+</html>

@@ -1,0 +1,96 @@
+
+<center>
+<input type=text style='hight=150;width=175' name=t1><br>
+<input type=button style='hight=40;width=40' value=1 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=2 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=3 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=+ onclick=calculate(this.value)><br>
+
+
+<input type=button style='hight=40;width=40' value=4 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=5 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=6 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=- onclick=calculate(this.value)><br>
+
+
+<input type=button style='hight=40;width=40' value=7 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=8 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=9 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=* onclick=calculate(this.value)><br>
+
+
+<input type=button style='hight=40;width=40' value=0 onclick=show(this.value)>
+<input type=button style='hight=40;width=40' value=C onclick=clear1()>
+<input type=button style='hight=40;width=40' value=CE onclick=clearentry()>
+<input type=button style='hight=40;width=40' value=/ onclick=calculate(this.value)><br>
+
+
+<input type=button style='hight=100;width=70' value== onclick=calculate(this.value)>
+</center>
+
+
+
+<script language=javascript>
+var flag=false;
+var ans=0;
+var op="";
+
+
+function show(data)
+{
+	var text=document.getElementById("t1");
+		if(flag==true)
+			text.value="";
+		text.value=text.value+data;
+		flag=false;
+}
+
+
+
+function calculate(ch)
+{
+	flag=true;
+		if(op=="")
+		{
+			ans=document.getElementById("t1").value;
+			op=ch;
+			return;
+		}
+	switch(op)
+	{
+		case'+':
+			ans=parseInt(ans)+parseInt(document.getElementById("t1").value);
+			break;
+		case'-':
+			ans=parseInt(ans)-parseInt(document.getElementById("t1").value);
+			break;
+		case'*':
+			ans=parseInt(ans)*parseInt(document.getElementById("t1").value);
+			break;
+		case'/':
+			ans=parseInt(ans)/parseInt(document.getElementById("t1").value);
+			break;
+	}
+		document.getElementById("t1").value=ans;
+		op=ch;
+}
+
+
+
+function clear1()
+{
+	document.getElementById("t1").value="";
+	ans=0;
+	op="";
+}
+
+function clearentry()
+{
+	document.getElementById("t1").value="";
+}			
+
+</script>	
+
+
+
+

@@ -1,0 +1,37 @@
+<script language=javascript>
+function disp()
+{
+	d=new Date();
+
+	h=d.getHours();
+	m=d.getMinutes();
+	s=d.getSeconds();
+	str=h+":"+m+":"+s;
+
+	window.document.f1.t1.value=str;
+	x=setTimeout("disp()",1000);
+	
+}
+
+
+function stop()
+{
+	clearTimeout(x);
+}
+</script>
+
+<form name=f1>
+<input type=text name=t1>
+<input type=button  value=start  onclick=disp()>
+<input type=button  value=stop  onclick=stop()>
+</form>
+
+
+
+
+
+
+
+
+
+

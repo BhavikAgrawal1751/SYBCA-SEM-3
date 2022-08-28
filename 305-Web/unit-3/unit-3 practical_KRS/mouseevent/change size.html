@@ -1,0 +1,10 @@
+<script language=javascript>
+function sizing(sz)
+{
+document.images[0].width+=sz;
+//width=width+size
+//350=350+50
+document.images[0].height+=sz;
+}
+</script>
+<img src="2.jpg" onmouseover="sizing(+50)" onmouseout="sizing(-50)">

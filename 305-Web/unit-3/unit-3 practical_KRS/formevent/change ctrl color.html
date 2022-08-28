@@ -1,0 +1,20 @@
+<script language=javascript>
+
+function changecolor(ctrl,color)
+{
+
+ctrl.style.backgroundColor=color;
+
+}
+
+</script>
+
+<form>
+
+name:<input type=text name=t1 onblur="changecolor(this,'red')"
+ onfocus="changecolor(this,'yellow')"><br>
+
+age:<input type=text name=t2 onblur="changecolor(this,'red')"
+ onfocus="changecolor(this,'yellow')">
+
+</form>

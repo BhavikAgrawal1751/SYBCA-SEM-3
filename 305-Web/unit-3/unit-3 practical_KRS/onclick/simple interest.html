@@ -1,0 +1,19 @@
+<script language= javascript>
+function cal()
+{
+var p=document.getElementById("t1").value;
+var r=document.getElementById("t2").value;
+var n=document.getElementById("t3").value;
+var amt=p*r*n/100;
+document.getElementById("t4").value=amt;
+}
+
+</script>
+<form>
+
+p<input type=text name=t1 id=t1><br>
+r<input type=text name=t2 id=t2><br>
+n<input type=text name=t3 id=t3><br>
+amt<input type=text name=t4 id=t4><br>
+<input type=button name=b1 value=ok onclick=cal()>
+</form>
