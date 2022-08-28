@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body align="center">
+
+<h2>FORM ELEMENTS</h2>
+
+<form action="form2.html">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname" placeholder="enter first name" ><br><br>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd"><br><br>
+
+
+Select Language:
+<input type="radio" id="html" name="fav_language" value="HTML" >HTML
+<input type="radio" id="css" name="fav_language" value="CSS"checked>CSS
+<input type="radio" id="javascript" name="fav_language" value="JAVASCRIPT" >JAVASCRIPT<br><br>
+
+
+
+
+
+<!--The value attribute is a string containing the radio button's value. The value is never shown to the user by their user agent. Instead, it's used to identify which radio button in a group is selected 
+
+The value attribute specifies the value to be sent to a server when a form is submitted.-->
+
+Select Vehical:
+<input type="checkbox" id="vehicle1" name="vehicle1" value="BIKE" checked>BIKE
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="CAR" >CAR
+<input type="checkbox" id="vehicle3" name="vehicle3" value="BOAT">BOAT
+<br><br>
+<!--
+COLOR:<input type="color" id="favcolor" name="favcolor"><br><br>
+DATE:<input type="date" id="birthday" name="birthday"><br><br>
+EMAIL:<input type="email" id="email" name="email"><br><br>
+FILE:<input type="file" id="myfile" name="myfile"><br><br>
+RANGE:<input type="range" id="volume" name="volume"min="0" max="11">
+NUMBER:<input type="number" id="n1" name="n1"><br><br>-->
+
+
+   <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo1</option>
+    <option value="saab">Saab1</option>
+    <option value="fiat">Fiat1</option>
+    <option value="audi">Audi1</option>
+  </select><br><br>
+
+   <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat" selected>Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+
+<!--  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+
+    <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea><br><br>
+
+    <textarea name="message" style="width:200px; height:600px;">The cat was playing in the garden.</textarea><br><br> -->
+
+
+ CHOOSE BROWSER :
+ <input list="browsers" name="browser">
+ <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <br><br>
+ 
+ 
+ 
+<input type="submit" name="s1" value="Submit">
+<input type="reset" name="s2" value="Reset">
+ <button type="button" onclick="alert('Hello World!')">Click Me!</button><br><br>
+
+</form>
+</table>
+</body>
+</html>
+
